@@ -1,0 +1,20 @@
+#pragma once
+#ifndef __Event__
+#define __Event__
+#include"Events.h"
+#include<string>
+#include <iostream>
+#include <istream>
+#include<fstream>
+#include<string>
+#include <stack>
+using namespace std;
+class user {
+public:
+    string name, password;
+    int id;
+    user();
+    void list(int id);
+};
+#endif
+

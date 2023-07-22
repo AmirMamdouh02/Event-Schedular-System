@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_DEPRECATE 
+#define _CRT_NONSTDC_NO_DEPRECATE
+#include "Events.h"
+#include "user.h"
+#include "Register.h"
+#include <iterator>
+#include <iostream>
+#include <istream>
+#include<fstream>
+#include<string>
+#include<vector>
+#include <ctime>
+using namespace std;
+int main() {
+	system("color f1");
+	Events s;
+	s.check_done_Events();
+	Register r;
+	return 0;
+}

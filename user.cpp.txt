@@ -1,0 +1,58 @@
+#define _CRT_NONSTDC_NO_DEPRECATE
+#define _CRT_SECURE_NO_DEPRECATE 
+#define _CRT_SECURE_NO_WARNINGS
+#include "user.h"
+#include"Events.h"
+#include"Register.h"
+#include<string>
+#include <iostream>
+#include <istream>
+#include<fstream>
+#include<vector>
+#include <ctime>
+
+user::user() {
+	srand(time(0));
+	id = rand();
+}
+void user::list(int id) {
+	system("cls");
+	Events er;
+	cout << "\t \t WELCOME TO EVENT'S SCHEUDLER \t \t  " << endl;
+	cout << " \t \t -------------------------------------- \t\t" << endl;
+	int choice = 0;
+	do
+	{
+		cout << "\t \t 1: ----------To Add An Event----------- \t \t" << endl;
+		cout << "\t \t 2: ----------To Update An Event----------- \t \t" << endl;
+		cout << "\t \t 3: -----------To Delete ----------  \t \t" << endl;
+		cout << "\t \t 4:------------Display All Events--------- " << endl;
+		cout << "\t \t 5: -----------To Display user Events sorted ----------  \t \t" << endl;
+		cout << "\t \t 6:-------------To log out---------\t\t" << endl;
+		cout << "\t \t 7:------------To Exit----------\t\t" << endl;
+		cout << " Enter your choice " << endl;
+		cin >> choice;
+		cin.ignore();
+		switch (choice)
+		{
+		case 1:
+			er.add(id);
+			break;
+		case 2:
+			er.update(id);
+			break;
+		case 3:
+			er.Delete(id);
+			break;
+		case 4:
+			er.display(id);
+			break;
+		case 5:
+			er.Display_each_event(id);
+			break;
+		case 6:Register::Register();
+			break;
+		case 7:exit(0);
+		}
+	} while (true);
+}

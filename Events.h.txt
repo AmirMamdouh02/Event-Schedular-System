@@ -1,0 +1,44 @@
+#ifndef __Events__
+#define __Events__
+#pragma once
+#include"Date.cpp"
+#include<string>
+#include <iostream>
+#include <istream>
+#include<fstream>
+using namespace std;
+class Events
+{
+public:
+	bool Done=0;
+	int user_id;
+	string name;
+	struct tm start_date;
+	struct tm enddate;
+	struct tm remainder_time;
+	string place;
+	string event_start_time;
+	int day, month, year, hours, minutes;
+	void setPlace(string place);
+	string getPlace();
+	void Display_each_event(int id);
+	void display(int id);
+	void setName(string name);
+    string getName();
+	void add(int id);
+	void update(int id);
+	void Delete(int id);
+	void GetEventsFromFile();
+	void setEventsToFile(int id);
+	bool check_date(int day, int month, int year, int minutes, int hours);
+	void setStartDate(int day, int month, int  year, int  hour, int minutes);
+	void setEndDate(int day, int month, int  year, int  hour, int minutes);
+	void setReminder(int day, int month, int  year, int  hour, int minutes);
+	void done_events(int id);
+	tm saveDate(int day, int month, int year, int hour, int minutes);
+	tm getStartDate();
+	tm getEndDate();
+	tm getReminderDate();
+	bool check_done_Events();
+};
+#endif

@@ -1,0 +1,23 @@
+#ifndef __Register__
+#define __Register__
+#pragma once
+#include "user.h"
+#include<string>
+#include <iostream>
+#include <istream>
+#include<fstream>
+#include<vector>
+#include <ctime>
+class Register {
+public:
+	vector <user> users_list;
+	void set_users_to_file();
+	void get_users_from_file();
+	void signup( int id);
+	void signin();
+	Register();
+};
+#endif
+
+
+
